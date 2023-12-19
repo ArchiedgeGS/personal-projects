@@ -1,1 +1,5 @@
- $ touch dir_1/dir_2/.placeholder
+$ mkdir config
+$ touch dir_1/dir_2/.placeholder
+$ git add config/.placeholder
+$ git commit -m "Create empty config directory"
+$ git push origin main
