@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+    margin: 0;
+    background-image: url(https://graphicriver.img.customer.envatousercontent.com/files/57560833/Leaves%20seamless%20background%20_pv.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=9fcef46a688196fb8317dd9e459f1ec3);
+    color: #ccffcc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+div {
+    text-align: center;
+    background-color: #334433;
+    height: auto;
+    width: max-content;
+    margin: 1rem auto;
+    padding: 0;
+    border-color: #00ff00;
+    border-style: solid;
+    border-width: 1px;
+}
+
+h1 {
+    padding-top: 1rem;
+    text-decoration: underline;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+h1,p {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+fieldset {
+    background-color: #334433;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 50%;
+    border-color: #00ff00;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input,select,textarea {
+    display: block;
+}
+
+label {
+    display: block;
+    padding: 0.2rem;
+}
+
+.radio-input,.checkbox-input {
+    display: inline-block;
+}
+
+hr {
+    border-color: #ccffcc;
+    border-style: dashed;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 40%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #334433;
+    border-color: #00ff00;
+    border-style: solid;
+    border-width: 1px;
+    color: #ccffcc;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #ccffcc;
+    border-color: #00ff00;
+    color: #334433;
+  }

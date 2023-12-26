@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário de Pesquisa</title>
+        <link rel="stylesheet" href="5. Survey Form.css">
+    </head>
+
+    <body>
+        <div id="title-background">
+            <h1 id="title">Formulário de Pesquisa</h1>
+            <p id="description">Obrigado por ceder seu tempo para nos ajudar!</p>
+        </div>
+
+        <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+            <fieldset>
+                <label id="name-label" for="name">Insira o seu nome:<hr><input required id="name" type="text" placeholder="Nome da Silva..."></label>
+                <label id="email-label" for="email">Insira o seu email:<hr><input required id="email" type="email" placeholder="nomedasilva@gmail.com..."></label>
+                <label id="number-label" for="number">Insira a sua idade:<hr><input  required id="number" type="number" min="12" max="120" placeholder="69..."></label>
+
+                <label id="select-label" for="dropdown">Qual a sua profissão?<hr>
+                    <select required id="dropdown">
+                        <option value="">(selecione uma opção)</option>
+                        <option value="1">Cientista da Computação</option>
+                        <option value="2">Engenheiro da Computação</option>
+                        <option value="3">Analista de Sistemas</option>
+                        <option value="4">Estudante</option>
+                        <option value="5">Outro</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label class="legend-label" id="radio-legend-label">Quanto você se interessa por Web Design?</label>
+                <hr>
+                    <label class="radio-label" for="muitissimo"><input class="radio-input" id="muitissimo" type="radio" name="radio" value="2">Muitíssimo</label>
+                    <label class="radio-label" for="muito"><input class="radio-input" id="muito" type="radio" name="radio" value="1">Muito</label>
+                    <label class="radio-label" for="mais-ou-menos"><input class="radio-input" id="mais-ou-menos" type="radio" name="radio" value="0" checked>Mais ou menos</label>
+                    <label class="radio-label" for="nao-muito"><input class="radio-input" id="nao-muito" type="radio" name="radio" value="-1">Não muito</label>
+                    <label class="radio-label" for="nem-um-pouco"><input class="radio-input" id="nem-um-pouco" type="radio" name="radio" value="-2">Nem um pouco</label>
+            </fieldset>
+
+            <fieldset>
+                <label class="legend-label" id="checkbox-legend-label">O que pode melhorar?</label>
+                <hr>
+                    <label class="checkbox-label" for="check1"><input class="checkbox-input" id="check1" type="checkbox" value="1">Projetos de Front-end</label>
+                    <label class="checkbox-label" for="check2"><input class="checkbox-input" id="check2" type="checkbox" value="2">Projetos de Back-end</label>
+                    <label class="checkbox-label" for="check3"><input class="checkbox-input" id="check3" type="checkbox" value="3">Visualização de Dados</label>
+                    <label class="checkbox-label" for="check4"><input class="checkbox-input" id="check4" type="checkbox" value="4">Desafios</label>
+                    <label class="checkbox-label" for="check5"><input class="checkbox-input" id="check5" type="checkbox" value="5">Comunidade Open Source</label>
+                    <label class="checkbox-label" for="check6"><input class="checkbox-input" id="check6" type="checkbox" value="6">Assistência com Gitters</label>
+                    <label class="checkbox-label" for="check7"><input class="checkbox-input" id="check7" type="checkbox" value="7">Videos</label>
+                    <label class="checkbox-label" for="check8"><input class="checkbox-input" id="check8" type="checkbox" value="8">Encontros Presenciais</label>
+                    <label class="checkbox-label" for="check9"><input class="checkbox-input" id="check9" type="checkbox" value="9">Wiki</label>
+                    <label class="checkbox-label" for="check10"><input class="checkbox-input" id="check10" type="checkbox" value="10">Cursos Adicionais</label>
+
+                <label>Adicione comentários e sugestões:<hr>
+                    <textarea id="textarea" rows="3" cols="30" placeholder="Eu gostaria que..."></textarea>
+                </label>
+            </fieldset>
+
+            <input id="submit" type="submit" value="ENVIAR RESPOSTAS">
+        </form>
+    </body>
+
+</html>
