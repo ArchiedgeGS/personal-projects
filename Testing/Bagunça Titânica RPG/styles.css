@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "diploma";
+    src: url("../Bagunça Titânica RPG/Fonts/diploma.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "livingstone";
+    src: url("../Bagunça Titânica RPG/Fonts/livingstone.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: '';
+    background-image: url("https://cdn.hearthstonetopdecks.com/wp-content/uploads/2017/11/kobolds-and-catacombs-cinematic-wallpaper008.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#title-screen-header {
+    font-family: "diploma";
+    font-size: 16em;
+    margin: auto auto 100px auto;
+    color: #660000;
+    text-shadow: black 10px 10px 5px;
+    -webkit-text-stroke: 0.1px #110000;
+    position: relative;
+    transition: margin 10s;
+}
+
+.screen {
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 10s ease;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 2em;
+    font-family: "livingstone";
+    background-color: #110000;
+    color: #ff6d6d;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 10em;
+    display: block;
+    margin: 1em auto;
+    box-shadow: black 10px 10px 3px;
+    outline: #660000 solid 5px;
+}
+
+button:hover {
+    background-color: #ff6d6d;
+    color: #110000;
+}

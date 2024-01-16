@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bagunça Titânica</title>
+    <link rel="icon" href="..\Bagunça Titânica RPG\Icons\Bagunça Titânica.jpeg">
+</head>
+
+<body>
+    <audio id="soundtrack" autoplay loop>
+        <source src="../Bagunça Titânica RPG/Soundtrack/Aaron Lucas (Aaron Krogh Music)/RPG Music & Loops - Free Resources/.Main Menu Theme.mp3" type="audio/mp3">
+    </audio>
+
+    <div id="title-screen" class="screen active">
+        <h1 id="title-screen-header">Bagunça Titânica</h1>
+        <button class="title-screen-button" id="title-screen-button">Pressione para continuar</button>
+    </div>
+
+    <div id="main-menu-screen" class="screen">
+        <h1 id="title-screen-header">Bagunça Titânica</h1>
+        <button class="main-menu-screen-button" id="play-button">Jogar</button>
+        <button class="main-menu-screen-button" id="options-button">Opções</button>
+        <button class="main-menu-screen-button" id="exit-button">Sair</button>
+    </div>
+
+    <div id="loadgame-screen" class="screen">
+        <h1 id="title-screen-header">Bagunça Titânica</h1>
+        <button class="loadgame-screen-button" id="newgame-button">Novo Jogo</button>
+        <button class="loadgame-screen-button" id="continue-button">Continuar</button>
+        <button class="loadgame-screen-button" id="deletesave-button" >Deletar Jogo Salvo</button>
+        <button class="loadgame-screen-button" id="backfromloadgame-button" >Voltar</button>
+    </div>
+
+    <div id="options-screen" class="screen">
+        <h1 id="title-screen-header">Bagunça Titânica</h1>
+        <button class="options-screen-button">Áudio?</button>
+        <button class="options-screen-button" id="backfromoptions-button">Voltar</button>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <!-- Conteúdo da Tela de Jogo -->
+        <h1>Bem-vindo ao jogo!</h1>
+        <p>Texto da sua tela de jogo...</p>
+        <button id="next-button">Finalizar Jogo</button>
+    </div>
+
+    <div id="end-screen" class="screen">
+        <!-- Conteúdo da Tela de Finalização -->
+        <h1>Parabéns! Você concluiu o jogo.</h1>
+        <p>Texto da sua tela de finalização...</p>
+        <button id="end-screen-button">Recomeçar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
