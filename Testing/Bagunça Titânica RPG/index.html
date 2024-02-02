@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <audio id="soundtrack" autoplay loop>
-        <source src="../Bagunça Titânica RPG/Soundtrack/Aaron Lucas (Aaron Krogh Music)/RPG Music & Loops - Free Resources/.Main Menu Theme.mp3" type="audio/mp3">
+    <audio id="main-menu-soundtrack" loop>
+        <source src="../Bagunça Titânica RPG/Soundtrack/.Main Menu Theme.mp3" type="audio/mp3">
     </audio>
 
     <div id="title-screen" class="screen active">
@@ -22,7 +22,7 @@
         <h1 id="title-screen-header">Bagunça Titânica</h1>
         <button class="main-menu-screen-button" id="play-button">Jogar</button>
         <button class="main-menu-screen-button" id="options-button">Opções</button>
-        <button class="main-menu-screen-button" id="exit-button">Sair</button>
+        <button class="main-menu-screen-button back" id="exit-button">Sair</button>
     </div>
 
     <div id="loadgame-screen" class="screen">
@@ -30,13 +30,29 @@
         <button class="loadgame-screen-button" id="newgame-button">Novo Jogo</button>
         <button class="loadgame-screen-button" id="continue-button">Continuar</button>
         <button class="loadgame-screen-button" id="deletesave-button" >Deletar Jogo Salvo</button>
-        <button class="loadgame-screen-button" id="backfromloadgame-button" >Voltar</button>
+        <button class="loadgame-screen-button back" id="backfromloadgame-button" >Voltar</button>
     </div>
 
     <div id="options-screen" class="screen">
         <h1 id="title-screen-header">Bagunça Titânica</h1>
-        <button class="options-screen-button">Áudio?</button>
-        <button class="options-screen-button" id="backfromoptions-button">Voltar</button>
+        <button class="options-screen-button" id="options-screen-audio-button">Áudio</button>
+        <button class="options-screen-button" id="options-screen-controls-button">Controles</button>
+        <button class="options-screen-button back" id="backfromoptions-button">Voltar</button>
+    </div>
+
+    <div id="options-audio-screen" class="screen">
+        <h1 id="title-screen-header">Bagunça Titânica</h1>
+        <div id="music-volume-slider-container">
+            <label for="music-volume-slider">Volume da Música:</label>
+            <span id="music-volume-slider-value">20</span>
+            <input type="range" id="music-volume-slider" min="0" max="100" value="20" step="5">
+        </div>
+        <div id="sfx-volume-slider-container">
+            <label for="sfx-volume-slider">Volume dos Efeitos Sonoros:</label>
+            <span id="sfx-volume-slider-value">20</span>
+            <input type="range" id="sfx-volume-slider" min="0" max="100" value="20" step="5">
+        </div>
+        <button class="options-screen-button back" id="backfromaudio-options-button">Voltar</button>
     </div>
 
     <div id="game-screen" class="screen">

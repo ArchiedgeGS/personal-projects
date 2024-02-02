@@ -4,6 +4,19 @@ const playButtonElement = document.getElementById("play-button");
 const optionsButtonElement = document.getElementById("options-button");
 const exitButtonElement = document.getElementById("exit-button");
 
+const optionsAudioButtonElement = document.getElementById("options-screen-audio-button");
+const backFromAudioOptionsButtonElement = document.getElementById("backfromaudio-options-button");
+const musicVolumeSliderElement = document.getElementById("music-volume-slider");
+let musicVolumeValueElement = document.getElementById("music-volume-slider-value");
+const sfxVolumeSliderElement = document.getElementById("sfx-volume-slider");
+let sfxVolumeValueElement = document.getElementById("sfx-volume-slider-value");
+
+let mainMenuSoundtrackElement = document.getElementById("main-menu-soundtrack");
+mainMenuSoundtrackElement.volume = 0.2;
+
+let currentSoundtrackId = mainMenuSoundtrackElement.id;
+let previousSoundtrackId = currentSoundtrackId;
+
 const newGameButtonElement = document.getElementById("newgame-button");
 const continueGameButtonElement = document.getElementById("continue-button");
 const deleteSaveButtonElement = document.getElementById("deletesave-button");
@@ -14,20 +27,55 @@ const backFromOptionsButtonElement = document.getElementById("backfromoptions-bu
 const nextButtonElement = document.getElementById("next-button");
 const endButtonElement = document.getElementById("end-screen-button");
 
-function startSoundtrack () {    
-    let audioElement = document.getElementById("soundtrack");
-    if(audioElement.paused) {
-    audioElement.play();
+
+
+function startSoundtrack (newCurrentSoundtrackId) {
+    previousSoundtrackId = currentSoundtrackId;
+    currentSoundtrackId = newCurrentSoundtrackId;
+
+    const previousAudioElement = document.getElementById(previousSoundtrackId);
+    if(previousAudioElement.play) {
+        previousAudioElement.pause();
+    }
+    const currentAudioElement = document.getElementById(currentSoundtrackId);
+    if(currentAudioElement.paused) {
+        currentAudioElement.play();
     }
 }
 
 function stopSoundtrack () {    
-    let audioElement = document.getElementById("soundtrack");
-    audioElement.currentTime = 0;
-    if(audioElement.play) {
-    audioElement.pause();
+    const currentAudioElement = document.getElementById(currentSoundtrackId);
+    currentAudioElement.currentTime = 0;
+    if(currentAudioElement.play) {
+        currentAudioElement.pause();
     }
 }
+
+optionsAudioButtonElement.addEventListener("click", () => 
+{
+    gameScreen.find(action => action.name === "goAudioOptions").action();
+});
+
+backFromAudioOptionsButtonElement.addEventListener("click", () => 
+{
+    gameScreen.find(action => action.name === "goOptions").action();
+});
+
+musicVolumeSliderElement.addEventListener("input", () => 
+{
+    const volume = musicVolumeSliderElement.value / 100;
+    mainMenuSoundtrackElement.volume = volume;
+    musicVolumeValueElement.textContent = musicVolumeSliderElement.value
+});
+
+sfxVolumeSliderElement.addEventListener("input", () => 
+{
+    const volume = sfxVolumeSliderElement.value / 100;
+    mainMenuSoundtrackElement.volume = volume;
+    musicVolumeValueElement.textContent = musicVolumeSliderElement.value
+});
+
+
 
 function toggleScreen(hideScreenId, showScreenId) {
     document.getElementById(hideScreenId).classList.remove('active');
@@ -40,7 +88,7 @@ const gameScreen = [
         name: 'goMainMenu',
         action: () => 
             { 
-                startSoundtrack(); 
+                startSoundtrack(mainMenuSoundtrackElement.id); 
                 toggleScreen(currentScreen, 'main-menu-screen'); 
                 currentScreen = "main-menu-screen";
             }
@@ -59,6 +107,14 @@ const gameScreen = [
             { 
                 toggleScreen(currentScreen, 'options-screen'); 
                 currentScreen = "options-screen";
+            }
+    },
+    {
+        name: 'goAudioOptions',
+        action: () => 
+            { 
+                toggleScreen(currentScreen, 'options-audio-screen'); 
+                currentScreen = "options-audio-screen";
             }
     },
     {

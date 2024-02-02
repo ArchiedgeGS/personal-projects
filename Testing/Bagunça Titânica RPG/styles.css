@@ -14,24 +14,74 @@ body {
     font-family: '';
     background-image: url("https://cdn.hearthstonetopdecks.com/wp-content/uploads/2017/11/kobolds-and-catacombs-cinematic-wallpaper008.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
 }
 
 #title-screen-header {
     font-family: "diploma";
-    font-size: 16em;
-    margin: auto auto 100px auto;
+    font-size: 16rem;
+    margin: auto auto 3rem auto;
     color: #660000;
     text-shadow: black 10px 10px 5px;
     -webkit-text-stroke: 0.1px #110000;
     position: relative;
     transition: margin 10s;
 }
+
+#music-volume-slider-container, #sfx-volume-slider-container {
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-family: "livingstone";
+    background-color: #110000;
+    color: #ff6d6d;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 16rem;
+    display: block;
+    margin: 1rem auto;
+    box-shadow: black 10px 10px 3px;
+    outline: #660000 solid 5px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #666666;
+    height: 0.5rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -0.5rem;
+    background: #ffa600;
+    height: 1.5rem;
+    width: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 5px solid #7a3799;
+  }
 
 .screen {
     text-align: center;
@@ -45,18 +95,22 @@ body {
     opacity: 1;
 }
 
+.back {
+    margin-top: 3rem;;
+}
+
 button {
     padding: 10px 20px;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: "livingstone";
     background-color: #110000;
     color: #ff6d6d;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 10em;
+    width: 16rem;
     display: block;
-    margin: 1em auto;
+    margin: 1rem auto;
     box-shadow: black 10px 10px 3px;
     outline: #660000 solid 5px;
 }
